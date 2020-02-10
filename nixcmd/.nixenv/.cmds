@@ -1,0 +1,38 @@
+
+
+########################################################################
+## >>>>>> BEG CONTRACT/CLIENT SECTION
+########################################################################
+
+
+
+########################################################################
+## END CONTRACT/CLIENT SECTION <<<<<<
+########################################################################
+
+export TIMESTAMP='date +"%Y%m%d%H%M%S"'
+
+alias prof="perl -d:DProf "
+alias forp="dprofpp "
+
+alias ptidy="perltidy"
+
+alias mv="mv -i"
+alias rm="rm -i"
+alias cp="cp -p"
+alias rmrf="rm -rf"
+alias up='cd .. '
+alias cls="clear"
+alias dir="ls -lA"
+alias dirt="ls -lArt"
+
+########################################################################
+## >>>>>> BEG CONTRACT/CLIENT SECTION
+########################################################################
+
+#alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+
+########################################################################
+## END CONTRACT/CLIENT SECTION <<<<<<
+########################################################################
+

@@ -1,0 +1,81 @@
+
+-l=300     # max line width
+-i=4      # indent length, standard
+-ci=4     # indent length, continuation
+-se       # output stderr to screen
+
+#-bbc      # Add blank line before comments
+
+-lbl=1    # Max consecutive empty lines
+
+#-bbb      # Add blank before control structures
+
+-b        # backup and replace file
+#-tac      # Copy all POD and comments to a file
+-ole=unix # UNIX face the line endings
+
+-bar      # Opening brace always on right
+
+-fs       # enable format skipping
+-hsc      # try to form hanging side comments
+-lp       # Parentheses, line up
+
+#-cab=2    # Break at commas after '=>', but try max one-liner
+-cti=0    # closing tokens indent, line up
+-sot      # Stack opening tokens
+-nsbl     # sub brace on the right
+
+-pt=1     # tightness , parentheses
+-sbt=0    # tightness , square-bracket
+-bt=1     # tightness , brace
+-bbt=0    # tightness , block brace
+
+#-vt=1     # vertical tightness , ALL
+#-pvt=1    # vertical tightness , parentheses
+#-sbvt=1   # vertical tightness , square-bracket
+#-bvt=1    # vertical tightness , brace
+#-bbvt=1   # vertical tightness , block brace
+
+-vtc=1    # vertical tightness closing , ALL
+-pvtc=0   # vertical tightness closing , parentheses
+#-sbvtc=0  # vertical tightness closing , square-bracket
+#-bvtc=0   # vertical tightness closing , brace
+
+-sfs      # semicolon , space in for()
+-asc      # semicolon , Add missing
+-dsm      # semicolon , delete extra
+-nsfs     # semicolon , no space before
+
+#-nibc     # never indent block comments
+-nolq     # never outdent long quoted blocks
+-nolc     # never outdent long comments
+
+-csc      # Add or update closing comments
+-csci=2   # Lines before adding -csc, listed below
+-cscl="sub : foreach for while"
+
+#-okw      # Outdent the specified keywords
+-okwl="next last redo goto"
+
+# Break before operators
+-wbb="= % + - * / x != == >= <= =~ !~ < > | & **= += *= &= <<= &&= -= /= |= >>= ||= .= %= ^= x="
+
+# Add left whitespace
+-wls="= ."
+
+# Add Right whitespace
+-wrs="= , ."
+
+# Remove left whitespace
+-nwls="->"
+
+# Remove Right whitespace
+-nwrs="->"
+
+#-fws      # Leave whitespace as is
+
+#-syn      # PERL check syntax
+#-pscf=-c  # PERL use '-c' only, not '-c -T'
+
+
+

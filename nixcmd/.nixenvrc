@@ -1,0 +1,46 @@
+
+export FG_USE_EXTRA_VIMRC=0
+
+export USER_LOGNAME=`/usr/bin/logname`
+
+export NIXENV_VIMRC=${NIXENV_ENV}/.vimrc
+export CULN=$(logname)
+
+alias dotidy='~/bin/dotidy '
+
+if [ -a ${NIXENV_VIMRC} ]; then
+    export MYVIMRC=${NIXENV_VIMRC}
+fi
+
+if [ -d ${NIXENV_ENV} ]; then 
+    # Shell special
+    if [ -e ${NIXENV_ENV}/.load ]; then 
+        export NIXENV_LOAD=${NIXENV_ENV}/.load
+        . ${NIXENV_LOAD}        
+    fi
+    
+    # Path/Env pre config
+    if [ -a ${NIXENV_ENV}/.conf ]; then
+        export NIXENV_CONF=${NIXENV_ENV}/.conf
+        . ${NIXENV_CONF}
+    fi
+
+    # Env Vars
+    if [ -a ${NIXENV_ENV}/.envs ]; then
+        export NIXENV_ENVS=${NIXENV_ENV}/.envs
+        . ${NIXENV_ENVS}
+    fi
+    
+    # Aliases
+    if [ -a ${NIXENV_ENV}/.cmds ]; then
+        export NIXENV_CMDS=${NIXENV_ENV}/.cmds
+        . ${NIXENV_CMDS}
+    fi
+    
+    # Functions
+    if [ -a ${NIXENV_ENV}/.func ]; then
+        export NIXENV_FUNC=${NIXENV_ENV}/.func
+        . ${NIXENV_FUNC}
+    fi
+
+fi
